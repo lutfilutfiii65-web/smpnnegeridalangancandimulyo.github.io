@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMP Negeri Dalangan Candimulyo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f4f7fb;color:#333}
+header{background:linear-gradient(135deg,#0f2b5b,#1e3c72);color:white;padding:25px;text-align:center}
+header h1{font-size:28px}
+header p{font-style:italic;color:#ffd700}
+nav{background:#163d7a;display:flex;flex-wrap:wrap;justify-content:center;padding:10px}
+nav a{color:white;text-decoration:none;margin:8px 15px;font-size:14px}
+nav a:hover{color:#ffd700}
+section{padding:40px 20px;max-width:1200px;margin:auto}
+h2{margin-bottom:20px;color:#1e3c72;text-align:center}
+.card{background:white;padding:20px;border-radius:12px;box-shadow:0 6px 15px rgba(0,0,0,0.1);margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.guru-card{text-align:center;background:white;padding:15px;border-radius:12px;box-shadow:0 6px 15px rgba(0,0,0,0.1)}
+.guru-card img{width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:10px}
+footer{background:#0f2b5b;color:white;text-align:center;padding:15px;margin-top:30px}
+button{background:#1e3c72;color:white;border:none;padding:10px 15px;border-radius:6px;cursor:pointer}
+button:hover{background:#163d7a}
+input,textarea,select{width:100%;padding:8px;margin-top:5px;margin-bottom:10px;border-radius:6px;border:1px solid #ccc}
+
+/* Modal untuk detail guru */
+.modal-guru {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content-guru {
+  background: white;
+  margin: auto;
+  padding: 25px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content-guru img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.close-guru {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body><header>
+<h1>SMP Negeri Dalangan Candimulyo</h1>
+<p>"Membangun Generasi Cerdas, Berkarakter dan Berprestasi"</p>
+</header><nav>
+<a href="#beranda">Beranda</a>
+<a href="#profil">Profil</a>
+<a href="#visi">Visi & Misi</a>
+<a href="#guru">Guru</a>
+<a href="#kurikulum">Kurikulum</a>
+<a href="#ppdb">PPDB</a>
+<a href="#galeri">Galeri</a>
+<a href="#kontak">Kontak</a>
+</nav><section id="beranda">
+
+<div id="modalGuru" class="modal-guru">
+  <div class="modal-content-guru">
+    <span class="close-guru">&times;</span>
+    <img id="fotoGuru">
+    <h3 id="namaGuru"></h3>
+    <p id="jabatanGuru"></p>
+    <p id="detailGuru"></p>
+  </div>
+</div>
+
+  <div class="card"></div>
+<h2>Beranda</h2>
+<div class="guru-card">
+    <h3>Sambutan Kepala Sekolah</h3>
+      <img src="foto/Bpk-Kepala-Sekolah.jpg.png.jpeg" alt="Kepala Sekolah"style="width:15%;border-radius:15px">
+      <h4><p>Kepala Sekolah</p></h4>
+      <h4>Bapak Ahmad Fauzi, M.Pd</h4>
+      <p>Selamat datang di website resmi SMP Negeri Dalangan Candimulyo. Kami berkomitmen memberikan pendidikan terbaik untuk membentuk generasi unggul dan berakhlak mulia.</p>
+</div>
+
+
+<div class="grid">
+<div class="card"><h4>Berita Terbaru</h4><p>Kegiatan class meeting dan lomba antar kelas berjalan sukses.</p></div>
+<div class="card"><h4>Pengumuman</h4><p>Ujian Tengah Semester dilaksanakan tanggal 10 Maret 2026.</p></div>
+<div class="card"><h4>Agenda</h4><p>Peringatan Hari Pendidikan Nasional.</p></div>
+</div>
+</section><section id="profil">
+<h2>Profil Sekolah</h2>
+<div class="card">
+<p><b>NPSN:</b> 20345678</p>
+<p><b>Status:</b> Negeri</p>
+<p><b>Tahun Berdiri:</b> 1995</p>
+<p><b>Akreditasi:</b> A</p>
+<p><b>Alamat:</b> Dalangan, Candimulyo, Magelang</p>
+<p><b>Telepon:</b> 0858 4296 0005</p>
+<p><b>Email:</b> lutfiilham747@gmail.com</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7911.634638343296!2d110.283577!3d-7.485414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8975f703b137%3A0x22cb531d9a81a300!2sLutfi%20Ulfa!5e0!3m2!1sen!2sid!4v1771899166534!5m2!1sen!2sid" width="1050" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</section><section id="visi">
+<h2>Visi, Misi & Tujuan</h2>
+<div class="card">
+<p><b>Visi:</b>Terwujudnya peserta didik yang berakhlak mulia, berprestasi, berwawasan lingkungan, dan mampu bersaing di era global</p>
+  
+<p><b>Misi:</b> </p>
+        <p><ul><li>Menanamkan nilai keimanan dan ketakwaan dalam kehidupan sehari-hari</li></ul></p>
+        <p><ul><li>Meningkatkan kualitas pembelajaran yang aktif, kreatif, dan inovatif.</li></ul></p>
+        <p><ul><li>Membiasakan perilaku disiplin, tanggung jawab, dan peduli lingkungan</li></ul></p>
+        <p><ul><li>Membangun kerja sama yang harmonis antara sekolah, orang tua, dan masyarakat</li></ul></p>
+        <p><ul><li>Meningkatkan mutu pendidikan, membangun karakter siswa, dan mengembangkan potensi akademik maupun non-akademik.</li></ul></p>
+
+<p><b>Tujuan:</b> Mencetak lulusan yang siap melanjutkan pendidikan dan berdaya saing tinggi.</p>
+            <p><ul><li>Mengembangkan potensi peserta didik secara optimal, baik akademik maupun non-akademik.</li></ul></p>
+            <p><ul><li>Membentuk karakter dan akhlak mulia, seperti disiplin, jujur, tanggung jawab, dan peduli sesama.</li></ul></p>
+            <p><ul><li>Meningkatkan kemampuan berpikir kritis, kreatif, dan mandiri sesuai perkembangan zaman.</li></ul></p>
+            <p><ul><li>Mempersiapkan siswa melanjutkan pendidikan ke jenjang yang lebih tinggi (SMA/SMK atau Perguruan Tinggi).</li></ul></p>
+            <p><ul><li>Membekali keterampilan hidup (life skills) agar mampu beradaptasi di masyarakat.</li></ul></p>
+</div>
+</section><section id="guru">
+  <h2>Tenaga Pendidik & Kependidikan</h2>
+
+  <div class="grid">
+ 
+    <!-- Kepala Sekolah -->
+    <div class="guru-card">
+      <img src="foto/Kepala-Sekolah.jpg.png.jpeg" alt="Kepala Sekolah">
+      <h4>Bapak Ahmad Fauzi, M.Pd</h4>
+      <p>Kepala Sekolah</p>
+    </div>
+
+    <!-- Wakil Kepala Sekolah -->
+    <div class="guru-card">
+      <img src="foto/Wakil-Kepala-Sekolah.jpg.png" alt="Wakil Kepala Sekolah">
+      <h4>Ibu Nur Aini, S.Pd</h4>
+      <p>Wakil Kepala Sekolah</p>
+    </div>
+
+    <!-- Guru Bahasa Indonesia -->
+    <div class="guru-card">
+      <img src="foto/Guru-Bahasa-Indonesia.jpg.png">
+      <h4>Ibu Sari Wati, S.Pd</h4>
+      <p>Guru Bahasa Indonesia</p>
+    </div>
+
+    <!-- Guru Matematika -->
+    <div class="guru-card">
+      <img src="foto/Guru-Matematika.jpg.png">
+      <h4>Bapak Agus Santoso, S.Pd</h4>
+      <p>Guru Matematika</p>
+    </div>
+
+    <!-- Guru IPA -->
+    <div class="guru-card">
+      <img src="foto/Guru-Ipa.jpg.jpeg">
+      <h4>Ibu Rina Lestari, M.Pd</h4>
+      <p>Guru IPA</p>
+    </div>
+
+    <!-- Guru IPS -->
+    <div class="guru-card">
+      <img src="foto/guru-ips.jpg.jpeg">
+      <h4>Bapak Hendra Wijaya, S.Pd</h4>
+      <p>Guru IPS</p>
+    </div>
+
+    <!-- Guru Bahasa Inggris -->
+    <div class="guru-card">
+      <img src="foto/Guru-Bahasa-Inggris.jpg.jpeg">
+      <h4>Bapak Mukhlasin S.Pd</h4>
+      <p>Guru Bahasa Inggris</p>
+    </div>
+
+    <!-- Guru PJOK -->
+    <div class="guru-card">
+      <img src="foto/Guru-PJOK.jpg.png">
+      <h4>Bapak Toni Saputra, S.Pd</h4>
+      <p>Guru PJOK</p>
+    </div>
+
+    <!-- Guru PAI -->
+    <div class="guru-card">
+      <img src="foto/Guru-Pendidikan-Agama-Islam.jpg.jpeg">
+      <h4>Bapak Muhammad Arif, S.Ag</h4>
+      <p>Guru Pendidikan Agama Islam</p>
+    </div>
+
+  </div>
+</section><section id="kurikulum">
+<h2>Kurikulum</h2>
+<div class="card">
+<p>Kurikulum Merdeka</p>
+<p>Program unggulan: Tahfidz, English Club, Olimpiade Sains.</p>
+</div>
+</section>
+
+<section id="ppdb">
+<h2>PPDB Online</h2>
+<div class="card">
+
+<iframe 
+src="https://docs.google.com/forms/d/e/1FAIpQLSfTIz3NWLejaPNFIyRIpsm-kWmo7Ljn-g5dYUzzb14jVjnMzQ/viewform?embedded=true" 
+width="100%" 
+height="900" 
+frameborder="0">
+Loading…
+</iframe>
+
+</div>
+</section>
+
+</div>
+
+<script>
+// Ambil elemen modal dan isinya
+var modal = document.getElementById("modalGuru");
+var foto = document.getElementById("fotoGuru");
+var nama = document.getElementById("namaGuru");
+var jabatan = document.getElementById("jabatanGuru");
+var detail = document.getElementById("detailGuru");
+
+// Ambil semua kartu guru
+var guruCards = document.querySelectorAll(".guru-card");
+
+// Tambahkan fungsi klik untuk setiap guru
+guruCards.forEach(function(card){
+  card.onclick = function(){
+    // Ambil info dari kartu yang diklik
+    foto.src = this.querySelector("img").src;
+    nama.innerText = this.querySelector("h4").innerText;
+    jabatan.innerText = this.querySelector("p").innerText;
+
+    // Detail berbeda tiap jabatan (ubah sesuai kebutuhan)
+    if(jabatan.innerText.includes("Kepala Sekolah")){
+      detail.innerText = "Memimpin sekolah dan bertanggung jawab atas seluruh kegiatan pendidikan.";
+    } else if(jabatan.innerText.includes("Wakil Kepala Sekolah")){
+      detail.innerText = "Membantu kepala sekolah dalam administrasi dan kegiatan akademik.";
+    } else {
+      detail.innerText = "Guru profesional yang membimbing dan mendidik siswa sesuai bidangnya.";
+    }
+
+    // Tampilkan modal
+    modal.style.display = "block";
+  }
+});
+
+// Tombol tutup modal
+document.querySelector(".close-guru").onclick = function(){
+  modal.style.display = "none";
+}
+
+// Klik di luar modal juga menutup
+window.onclick = function(event){
+  if(event.target == modal){
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</section><section id="galeri">
+<h2>Galeri</h2>
+<div class="grid">
+<img src="foto/suasana.jpg.jpeg" style="width:100%;border-radius:12px">
+<img src="foto/Gerbang-Depan.jpg.jpeg" style="width:100%;border-radius:12px">
+<img src="foto/lapangan.jpg.jpeg" style="width:100%;border-radius:12px">
+</div>
+</section><section id="kontak">
+<h2>Kontak & Layanan</h2>
+<div class="card">
+<p>Telepon: 0858 4296 0005</p>
+<p>Email: lutfiilham747@gmail.com</p>
+<p>Jam Pelayanan: Senin - Jumat (07.00 - 14.00 WIB)</p>
+<form>
+<input type="text" placeholder="Nama">
+<input type="email" placeholder="Email">
+<textarea placeholder="Pesan"></textarea>
+<button>Kirim</button>
+</form>
+</div>
+</section><footer>
+&copy; 2025 SMP Negeri Dalangan Candimulyo - Website Resmi
+</footer><script>
+document.getElementById("ppdbForm").addEventListener("submit",function(e){
+e.preventDefault();
+alert("Pendaftaran berhasil (Simulasi). Hubungkan ke Google Sheet untuk penyimpanan otomatis.");
+this.reset();
+});
+</script></body>
+</html>
